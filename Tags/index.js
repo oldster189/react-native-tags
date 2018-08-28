@@ -103,6 +103,7 @@ class Tags extends React.Component {
           maxNumberOfTags > this.state.tags.length && (
             <View style={[styles.textInputContainer]}>
               <TextInput
+                ref={ref => (this.tagInput = ref)}
                 value={this.state.text}
                 style={[styles.textInput, inputStyle]}
                 onChangeText={this.onChangeText}
