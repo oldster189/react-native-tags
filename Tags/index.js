@@ -25,6 +25,7 @@ class Tags extends React.Component {
   }
 
   onChangeText = text => {
+    this.props.onChangeText(text)
     if (text.length === 0) {
       // `onKeyPress` isn't currently supported on Android; I've placed an extra
       //  space character at the start of `TextInput` which is used to determine if the
